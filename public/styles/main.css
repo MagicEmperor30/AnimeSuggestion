@@ -1,0 +1,116 @@
+/* main.css */
+
+/* Resetting default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container for the main content */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 36px;
+}
+
+/* Form styling */
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Anime suggestion container */
+.anime-container {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+/* Anime title styling */
+.anime-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Anime details */
+.anime-details {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Anime image */
+.anime-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.anime-image:hover {
+    transform: scale(1.02);
+}
+
+/* Links styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .anime-title {
+        font-size: 24px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

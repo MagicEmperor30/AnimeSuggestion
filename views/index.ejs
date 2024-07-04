@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Suggestion Website</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <h1>An Anime Suggestion Website</h1>
+    <div class="container">
+        <form action="/suggestion" method="POST">
+            <button type="submit">Get Random Anime Suggestion</button>
+        </form>
+
+        <% if (locals.animeData) { %>
+            <div class="anime-container">
+                <h2 class="anime-title"><%= animeData.title %></h2>
+                <p class="anime-details"><strong>Type:</strong> <%= animeData.type %></p>
+                <p class="anime-details"><strong>Status:</strong> <%= animeData.status %></p>
+                <p class="anime-details"><strong>Aired:</strong> <%= animeData.aired.string %></p>
+                <p class="anime-details"><strong>Duration:</strong> <%= animeData.duration %></p>
+                <p class="anime-details"><strong>Rating:</strong> <%= animeData.rating %></p>
+                <p class="anime-details"><strong>Score:</strong> <%= animeData.score %></p>
+                <p class="anime-details"><strong>Synopsis:</strong> <%= animeData.synopsis %></p>
+                
+                <% if (animeData.images && animeData.images.jpg && animeData.images.jpg.large_image_url) { %>
+                    <img class="anime-image" src="<%= animeData.images.jpg.large_image_url %>" alt="Anime Image">
+                <% } %>
+
+                <p class="anime-details"><strong>Genres:</strong>
+                    <% animeData.genres.forEach(genre => { %>
+                        <a href="<%= genre.url %>"><%= genre.name %></a>
+                    <% }); %>
+                </p>
+
+                <p class="anime-details"><strong>Studios:</strong>
+                    <% animeData.studios.forEach(studio => { %>
+                        <a href="<%= studio.url %>"><%= studio.name %></a>
+                    <% }); %>
+                </p>
+                
+                <p class="anime-details"><strong>More info:</strong> <a href="<%= animeData.url %>">MAL Link</a></p>
+            </div>
+        <% } else { %>
+            <p>No anime suggestion available.</p>
+        <% } %>
+    </div>
+</body>
+</html>
