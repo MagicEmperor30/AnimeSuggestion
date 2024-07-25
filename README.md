@@ -1,7 +1,6 @@
 
-Certainly! Here’s the updated README without the command-line instructions:
-
 Anime Suggestion Website
+
 Overview
 The Anime Suggestion Website is a web application designed to recommend anime based on user preferences. By leveraging a robust backend, the app provides personalized anime suggestions, making it easier for users to discover new content tailored to their interests.
 
